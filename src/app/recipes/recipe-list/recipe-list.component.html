@@ -8,7 +8,8 @@
       <!--Anchor Element-->
      <app-recipe-item
      *ngFor="let recipeEl of recipes"
-     [recipe]="recipeEl"></app-recipe-item>
+     [recipe]="recipeEl"
+     (recipeDetails)="onRecipeSelected(recipeEl)"></app-recipe-item>
       <!--Anchor element ends here-->
 
     </div>

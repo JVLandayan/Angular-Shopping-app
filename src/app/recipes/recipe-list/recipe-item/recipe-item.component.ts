@@ -14,9 +14,9 @@ export class RecipeItemComponent implements OnInit {
   }
 
   @Input ()recipe: Recipe
-  @Output () recipeDetails = new EventEmitter <Recipe>();
+  @Output () recipeDetails = new EventEmitter <void>();
 
-  showDetails() {
+  onSelected() {
     this.recipeDetails.emit
   }
 
