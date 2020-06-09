@@ -13,9 +13,24 @@ export class ShoppingListComponent implements OnInit {
     new Ingredient ('Tomatoes', 10)
   ];
 
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getData(list_data: {itemName: string, itemAmount:number}) {
+    this.ingredients.push(
+      new Ingredient (list_data.itemName, list_data.itemAmount)
+    )
+  }
+
+  deleteData(deleteData: string) {
+    if (deleteData =='delete') {
+      this.ingredients.pop
+    }
+
   }
 
 }
